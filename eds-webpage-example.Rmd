@@ -1,0 +1,49 @@
+---
+title: "My Fancy Rmd"
+author: "Ryan Munnikhuis"
+subtitle: Some changes in YAML
+output:
+  html_document:
+    theme: paper
+    toc: yes
+    toc_float: TRUE 
+    number_sections: TRUE
+    code_folding: hide 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## My first chapter 
+
+### Preface
+ 
+this is the cool header 
+
+```{r}
+
+a = 12 
+
+b = 13 
+
+a_b = a + b
+
+
+```
+
+## My second chapter 
+
+### This is a note of something in second doc
+
+#### Even more cool stuff
+
+```{r}
+
+eq = expression(3 * x ^ 3 * x ^ 4)
+
+dx_dt = D(expr =eq, "x")
+
+dx_dt
+```
+
