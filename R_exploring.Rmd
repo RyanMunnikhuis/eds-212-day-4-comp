@@ -1,0 +1,46 @@
+---
+title: "R exploring"
+author: "Ryan Munnikhuis"
+date: "8/5/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(GGally)
+library(skimr)
+library(palmerpenguins)
+```
+
+## Rapid fire tools for data exploration. 
+
+```{r}
+# Return the names of all variables 
+
+names(penguins)
+
+#Dimensions 
+dim(penguins)
+
+# Overall summary of the data
+summary(penguins)
+
+# Look at first few lines 
+head(penguins, 30)
+
+# Look at last few lines
+tail(penguins)
+
+# USe GGally::ggpairs()
+
+GGally::ggpairs(penguins)
+
+#USe skimr::skim()
+skimr::skim(penguins)
+
+```
+
+```{r}
+
+```
+

@@ -3,12 +3,14 @@ title: "My Fancy Rmd"
 author: "Ryan Munnikhuis"
 subtitle: Some changes in YAML
 output:
+  pdf_document:
+    toc: yes
   html_document:
     theme: paper
     toc: yes
-    toc_float: TRUE 
-    number_sections: TRUE
-    code_folding: hide 
+    toc_float: yes
+    number_sections: yes
+    code_folding: hide
 ---
 
 ```{r setup, include=FALSE}
