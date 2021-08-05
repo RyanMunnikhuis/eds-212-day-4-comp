@@ -1,0 +1,72 @@
+---
+title: "eds-212-day-4-comp-session"
+author: "Ryan Munnikhuis"
+date: "8/5/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Creating matrices in R 
+
+Use the `matrix()` function to wrap a series of values (a vector) into a matrix.
+
+- use `nrow = ` to specify number of rows
+
+- use `ncol = ` to specify number of columns 
+
+- use `byrow = TRUE ` to populate the matrix by ROWS instead of columns 
+
+```{r}
+cats = c(1, 3, 4, 10, 9, 100, 11, 15)
+
+# wrap cats into a matrix
+
+cat_matrix = matrix(data = cats, nrow = 4, ncol = 5, byrow = TRUE)
+```
+
+```{r}
+dogs = matrix(data = c(1, 2, 5, 9), nrow = 2, ncol = 2, byrow = TRUE)
+
+pups = matrix(data = c(4, 5, 1, 9), nrow = 2, ncol = 2, byrow = TRUE)
+```
+
+#Matrix math
+```{r}
+dogs + pups
+dogs - pups
+4 * dogs
+dogs %*% pups
+```
+
+```{r}
+insect_leslie = matrix(data = c(0, 0, 600, 0.2, 0, 0, 0, 0.08, 0.6), nrow = 3, ncol = 3, byrow = TRUE)
+# Specify the intial conditions 
+# What is the poplulation in each life stage at year 0?
+
+insect_y0 = c(12000, 700, 500)
+
+# Project the population in each life stage for year 1 
+insect_y1 = insect_leslie %*% insect_y0
+
+insect_y1
+
+insect_y2 = insect_leslie %*% insect_y1
+
+insect_y2
+
+insect_y3 = insect_leslie %*% insect_y2
+
+insect_y3
+
+insect_y4 = insect_leslie %*% insect_y3
+
+insect_y4
+```
+
+```{r}
+
+```
+
